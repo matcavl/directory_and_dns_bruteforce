@@ -1,0 +1,6 @@
+advanced
+www
+mail
+painel
+login
+webmail
