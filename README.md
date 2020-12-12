@@ -1,11 +1,11 @@
-## DNS_BRUTE
-### Script developed to make host discovery with several subdomains in a DNS using brute force.
+## DIRECTORY BRUTE FORCE AND DNS BRUTE
+## Scripts developed to do host discovery with several subdomains in a DNS and / or find directories in a given domain using. Both using brute force.
 
 <hr>
 
 
 ## USAGE: 
-### python3 dns_brute.py <domínio> <dns_wordlist.txt>
+### DNS_BRUTE:  python3 dns_brute.py <domínio> <dns_wordlist.txt>
 
 <hr>
 
