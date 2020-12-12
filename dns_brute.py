@@ -2,29 +2,29 @@ import dns.resolver
 import sys 
 
 try:
-	dominio = sys.argv[1]
+	domain = sys.argv[1]
 	nome_arquivo = sys.argv[2]
 except:
-	print("Argumentos invalidos")
-	print("Usage: dns_brute.py <dominio> <wordlist>")
+	print("Invalid arguments")
+	print("Usage: dns_brute.py <domain> <wordlist>")
 	sys.exit(1)
 
 try:
 	arquivo = open(nome_arquivo)
-	subdominios = arquivo.read().splitlines()
+	subdomains = arquivo.read().splitlines()
 except:
-	print ("Falha na leitura do arquivo")
+	print ("Failed to read the file")
 	sys.exit()
 
 
-for subdominio in subdominios:
+for subdomain in subdomains:
 	try:
-		domesub = subdominio + "." + dominio
+		domesub = subdomain + "." + domain
 		resultados = dns.resolver.resolve(domesub, 'a')
 		for resultado in resultados:
 			print (domesub, resultado)
 
 	except:
-		print ("Não encontrado nenhum subdominio")
+		print ("No subdomains of: " + subdomain)
 		pass
 
